@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: none;
+}
+html {
+  font-size: 26.66667vw;
+}
+body {
+  background: #fff;
+  font-size: .14rem;
+  font-family: -apple-system, Helvetica, sans-serif;
+  line-height: 1.5;
+}
+a {
+  color: #666;
+  text-decoration: none;
+}
+i {
+  font-style: normal;
+}
+li {
+  list-style: none;
+}
+img {
+  vertical-align: middle;
+}
+input {
+  border: 0;
+  outline: 0;
+}
+.bt {
+  border-top: 1px solid #ccc;
+}
+.bb {
+  border-bottom: 1px solid #ccc;
+}
+.bl {
+  border-left: 1px solid #ccc;
+}
+.br {
+  border-right: 1px solid #ccc;
+}
+/* 头部区域 */
+#header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  z-index: 2;
+}
+#header .logo {
+  width: 0.8rem;
+  height: 0.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#header .logo > a {
+  width: 0.58rem;
+  height: 0.21rem;
+  display: block;
+  background: url(../images/sprites.png) 0 -1.1rem / 2rem 2rem;
+}
+#header .search {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+#header .search > form {
+  width: 100%;
+  position: relative;
+}
+#header .search > form > i {
+  width: 0.21rem;
+  height: 0.21rem;
+  background: url(../images/sprites.png) -0.58rem -1.1rem / 2rem 2rem;
+  position: absolute;
+  left: 0.06rem;
+  top: 0.06rem;
+}
+#header .search > form > input {
+  width: 100%;
+  height: 0.3rem;
+  border-radius: 15px;
+  padding-left: 0.3rem;
+  font-size: .14rem;
+}
+#header .login {
+  width: 0.5rem;
+  height: 0.4rem;
+}
+#header .login > a {
+  display: block;
+  color: #fff;
+  text-align: center;
+  line-height: 0.4rem;
+}
+/* 底部区域 */
+#footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background-color: #fff;
+  z-index: 2;
+}
+#footer > ul > li {
+  float: left;
+  width: 25%;
+}
+#footer > ul > li > a {
+  display: block;
+  text-align: center;
+}
+#footer > ul > li > a > img {
+  width: 0.65rem;
+}

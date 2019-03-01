@@ -1,0 +1,155 @@
+// 定义京东主题色变量
+@main-color: #e93b3d;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    // 设置移动端点击高亮背景色, 默认淡蓝
+    -webkit-tap-highlight-color: transparent;
+    // 设置文字允许字体小于12px
+    -webkit-text-size-adjust: none;
+}
+
+html {
+    font-size: 26.66667vw;
+}
+
+body {
+    background: #fff;
+    font-size: .14rem;
+    font-family: -apple-system, Helvetica, sans-serif;
+    line-height: 1.5;
+}
+
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+i {
+    font-style: normal;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    vertical-align: middle;
+}
+
+input {
+    border: 0;
+    outline: 0;
+}
+
+// 定义一些公共边框类名
+.bt {
+    border-top: 1px solid #ccc;
+}
+
+.bb {
+    border-bottom: 1px solid #ccc;
+}
+
+.bl {
+    border-left: 1px solid #ccc;
+}
+
+.br {
+    border-right: 1px solid #ccc;
+}
+
+/* 头部区域 */
+#header {
+    position: fixed;
+    // 定位会脱标, 需要手动添加宽度
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    // 轮播图插件会提高层级, 需要手动提高层级才不会被盖住
+    z-index: 2;
+
+    .logo {
+        width: 0.8rem;
+        height: 0.4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        >a {
+            width: 0.58rem;
+            height: 0.21rem;
+            display: block;
+            background: url(../images/sprites.png) 0 -1.1rem~"/"2rem 2rem;
+        }
+    }
+
+    .search {
+        flex: 1;
+        display: flex;
+        align-items: center;
+
+        >form {
+            width: 100%;
+            position: relative;
+
+            >i {
+                width: 0.21rem;
+                height: 0.21rem;
+                background: url(../images/sprites.png) -0.58rem -1.1rem~"/"2rem 2rem;
+                position: absolute;
+                left: 0.06rem;
+                top: 0.06rem;
+            }
+
+            >input {
+                width: 100%;
+                height: 0.3rem;
+                border-radius: 15px;
+                padding-left: 0.3rem;
+                font-size: .14rem;
+            }
+        }
+    }
+
+    .login {
+        width: 0.5rem;
+        height: 0.4rem;
+
+        >a {
+            display: block;
+            color: #fff;
+            text-align: center;
+            line-height: 0.4rem;
+        }
+    }
+}
+
+/* 底部区域 */
+#footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background-color: #fff;
+    // 轮播图插件会提高层级, 需要手动提高层级才不会被盖住
+    z-index: 2;
+
+    >ul {
+        >li {
+            float: left;
+            width: 25%;
+
+            >a {
+                display: block;
+                text-align: center;
+
+                >img {
+                    width: 0.65rem;
+                }
+            }
+        }
+    }
+}

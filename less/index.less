@@ -1,0 +1,177 @@
+// 引入公共样式文件
+@import './base.less';
+
+/* 轮播图区域 */
+#slide {
+    img {
+        width: 100%;
+    }
+
+    // 修改小圆点样式
+    .swiper-pagination-bullet-active {
+        background-color: #fff;
+    }
+}
+
+/* 导航区域 */
+#nav {
+    >ul {
+        display: flex;
+        /* 支持换行 */
+        flex-wrap: wrap;
+        margin: .1rem 0;
+        >li {
+            width: 25%;
+
+            >a {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                >img {
+                    width: 0.4rem;
+                    margin: .04rem 0 .06rem;
+                }
+            }
+        }
+    }
+}
+
+/* 主体区域 */
+#main {
+    background-color: #eee;
+    padding: 0.1rem;
+    margin-bottom: .5rem;
+
+    .seckill {
+        background-color: #fff;
+
+        .title {
+            height: 0.4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .left {
+                display: flex;
+
+                >img {
+                    height: 0.25rem;
+                    margin-left: 0.1rem;
+                }
+
+                >span {
+                    color: @main-color;
+                    margin-left: 0.1rem;
+                }
+
+                >.countdown {
+                    margin-left: 0.1rem;
+
+                    span:not(:nth-child(3n)) {
+                        display: inline-block;
+                        width: 0.15rem;
+                        height: 0.15rem;
+                        line-height: 0.15rem;
+                        text-align: center;
+                        background-color: #000;
+                        color: #fff;
+                    }
+                }
+            }
+
+            >a {
+                margin-right: 0.1rem;
+            }
+        }
+
+        .content {
+            >ul {
+                display: flex;
+
+                >li {
+                    flex: 1;
+
+                    >a {
+                        display: block;
+                        text-align: center;
+
+                        >img {
+                            width: 1.1rem;
+                            margin-bottom: 0.08rem;
+                        }
+
+                        >span {
+                            font-size: 0.14rem;
+                            line-height: 0.14rem;
+                            color: @main-color;
+                            display: block;
+                        }
+
+                        >del {
+                            font-size: 0.12rem;
+                            color: #ccc;
+                        }
+                    }
+                }
+
+                li~li {
+                    //关系选择器, 表示除第一个li之后的其他兄弟li
+                    border-left: 1px solid #eee;
+                }
+            }
+        }
+    }
+
+    .market {
+        background-color: #fff;
+        margin-top: 0.1rem;
+
+        .title {
+            border-bottom: 1px solid #ccc;
+
+            >h4 {
+                line-height: 0.3rem;
+                font-weight: normal;
+            }
+
+            >h4::before {
+                content: '';
+                width: 0.02rem;
+                height: 0.16rem;
+                background-color: @main-color;
+                float: left;
+                margin: 0.06rem 0.08rem 0 0.12rem;
+            }
+        }
+
+        .content {
+            display: flex;
+
+            .left {
+                flex: 1;
+
+                >a {
+                    display: block;
+
+                    >img {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .right {
+                flex: 1;
+
+                >a {
+                    display: block;
+
+                    >img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

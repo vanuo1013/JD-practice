@@ -1,0 +1,255 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: none;
+}
+html {
+  font-size: 26.66667vw;
+}
+body {
+  background: #fff;
+  font-size: .14rem;
+  font-family: -apple-system, Helvetica, sans-serif;
+  line-height: 1.5;
+}
+a {
+  color: #666;
+  text-decoration: none;
+}
+i {
+  font-style: normal;
+}
+li {
+  list-style: none;
+}
+img {
+  vertical-align: middle;
+}
+input {
+  border: 0;
+  outline: 0;
+}
+.bt {
+  border-top: 1px solid #ccc;
+}
+.bb {
+  border-bottom: 1px solid #ccc;
+}
+.bl {
+  border-left: 1px solid #ccc;
+}
+.br {
+  border-right: 1px solid #ccc;
+}
+/* 头部区域 */
+#header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  z-index: 2;
+}
+#header .logo {
+  width: 0.8rem;
+  height: 0.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#header .logo > a {
+  width: 0.58rem;
+  height: 0.21rem;
+  display: block;
+  background: url(../images/sprites.png) 0 -1.1rem / 2rem 2rem;
+}
+#header .search {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+#header .search > form {
+  width: 100%;
+  position: relative;
+}
+#header .search > form > i {
+  width: 0.21rem;
+  height: 0.21rem;
+  background: url(../images/sprites.png) -0.58rem -1.1rem / 2rem 2rem;
+  position: absolute;
+  left: 0.06rem;
+  top: 0.06rem;
+}
+#header .search > form > input {
+  width: 100%;
+  height: 0.3rem;
+  border-radius: 15px;
+  padding-left: 0.3rem;
+  font-size: .14rem;
+}
+#header .login {
+  width: 0.5rem;
+  height: 0.4rem;
+}
+#header .login > a {
+  display: block;
+  color: #fff;
+  text-align: center;
+  line-height: 0.4rem;
+}
+/* 底部区域 */
+#footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background-color: #fff;
+  z-index: 2;
+}
+#footer > ul > li {
+  float: left;
+  width: 25%;
+}
+#footer > ul > li > a {
+  display: block;
+  text-align: center;
+}
+#footer > ul > li > a > img {
+  width: 0.65rem;
+}
+/* 轮播图区域 */
+#slide img {
+  width: 100%;
+}
+#slide .swiper-pagination-bullet-active {
+  background-color: #fff;
+}
+/* 导航区域 */
+#nav > ul {
+  display: flex;
+  /* 支持换行 */
+  flex-wrap: wrap;
+  margin: .1rem 0;
+}
+#nav > ul > li {
+  width: 25%;
+}
+#nav > ul > li > a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#nav > ul > li > a > img {
+  width: 0.4rem;
+  margin: .04rem 0 .06rem;
+}
+/* 主体区域 */
+#main {
+  background-color: #eee;
+  padding: 0.1rem;
+  margin-bottom: .5rem;
+}
+#main .seckill {
+  background-color: #fff;
+}
+#main .seckill .title {
+  height: 0.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#main .seckill .title .left {
+  display: flex;
+}
+#main .seckill .title .left > img {
+  height: 0.25rem;
+  margin-left: 0.1rem;
+}
+#main .seckill .title .left > span {
+  color: #e93b3d;
+  margin-left: 0.1rem;
+}
+#main .seckill .title .left > .countdown {
+  margin-left: 0.1rem;
+}
+#main .seckill .title .left > .countdown span:not(:nth-child(3n)) {
+  display: inline-block;
+  width: 0.15rem;
+  height: 0.15rem;
+  line-height: 0.15rem;
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+}
+#main .seckill .title > a {
+  margin-right: 0.1rem;
+}
+#main .seckill .content > ul {
+  display: flex;
+}
+#main .seckill .content > ul > li {
+  flex: 1;
+}
+#main .seckill .content > ul > li > a {
+  display: block;
+  text-align: center;
+}
+#main .seckill .content > ul > li > a > img {
+  width: 1.1rem;
+  margin-bottom: 0.08rem;
+}
+#main .seckill .content > ul > li > a > span {
+  font-size: 0.14rem;
+  line-height: 0.14rem;
+  color: #e93b3d;
+  display: block;
+}
+#main .seckill .content > ul > li > a > del {
+  font-size: 0.12rem;
+  color: #ccc;
+}
+#main .seckill .content > ul li ~ li {
+  border-left: 1px solid #eee;
+}
+#main .market {
+  background-color: #fff;
+  margin-top: 0.1rem;
+}
+#main .market .title {
+  border-bottom: 1px solid #ccc;
+}
+#main .market .title > h4 {
+  line-height: 0.3rem;
+  font-weight: normal;
+}
+#main .market .title > h4::before {
+  content: '';
+  width: 0.02rem;
+  height: 0.16rem;
+  background-color: #e93b3d;
+  float: left;
+  margin: 0.06rem 0.08rem 0 0.12rem;
+}
+#main .market .content {
+  display: flex;
+}
+#main .market .content .left {
+  flex: 1;
+}
+#main .market .content .left > a {
+  display: block;
+}
+#main .market .content .left > a > img {
+  width: 100%;
+}
+#main .market .content .right {
+  flex: 1;
+}
+#main .market .content .right > a {
+  display: block;
+}
+#main .market .content .right > a > img {
+  width: 100%;
+}

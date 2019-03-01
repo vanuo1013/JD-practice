@@ -1,0 +1,139 @@
+@import './base.less';
+
+// 头部区域
+#header {
+    background-color: #eee;
+
+    .left {
+        width: .4rem;
+        height: .4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        >a {
+            width: .2rem;
+            height: .2rem;
+            display: block;
+            background: url(../images//sprites.png) -0.2rem 0~"/"2rem 2rem;
+        }
+    }
+
+    .right {
+        width: .4rem;
+        height: .4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        >a {
+            width: .2rem;
+            height: .2rem;
+            display: block;
+            background: url(../images//sprites.png) -0.6rem 0~"/"2rem 2rem;
+        }
+    }
+}
+
+// 主体区域
+#main {
+    display: flex;
+    padding-top: .4rem;
+    padding-bottom: .5rem;
+    // 这里用100%也可以, 但是要从html>body>main都设置, 使用vh可直接参照视口高度
+    height: 100vh;
+    overflow: hidden;
+
+    .category-left {
+        width: .85rem;
+        // 保证子元素高度超过父元素高度, 内容不   够时也不会异常显示
+        height: 100%;
+
+        .swiper-container {
+            // 给滑动大容器高度固定和滑动区域高度一样
+            height: 100%;
+
+            .swiper-wrapper {
+                ul.swiper-slide {
+                    // 覆盖默认swiper.css里面加的100%的高度, 让其高度由内容撑开
+                    height: auto;
+
+                    li {
+                        a {
+                            display: block;
+                            height: .46rem;
+                            text-align: center;
+                            line-height: .46rem;
+                            background-color: #eee;
+                        }
+                    }
+
+                    li.active {
+                        a {
+                            background-color: #fff;
+                            color: @main-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .category-right {
+        flex: 1;
+        padding: .06rem;
+
+        .swiper-container {
+            // 给滑动大容器高度固定和滑动区域高度一样
+            height: 100%;
+
+            .swiper-wrapper {
+                .swiper-slide {
+                    height: auto;
+
+                    .banner {
+                        >img {
+                            width: 100%;
+                        }
+                    }
+
+                    .jd-brand {
+                        margin-top: .1rem;
+
+                        ul {
+                            display: flex;
+                            flex-wrap: wrap;
+
+                            li {
+                                width: 33.33%;
+
+                                a {
+                                    display: block;
+                                    text-align: center;
+
+                                    img {
+                                        width: .6rem;
+                                    }
+
+                                    span {
+                                        display: block;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            // 设置滚动条样式
+            .swiper-scrollbar {
+                width: .02rem;
+                right: 0;
+                background-color: rgba(0, 0, 0, 0);
+
+                .swiper-scrollbar-drag {
+                    background: rgba(0, 0, 0, 0.2);
+                }
+            }
+        }
+    }
+}

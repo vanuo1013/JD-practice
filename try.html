@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 346px;
+            height: 680px;
+            background: url(./phone.png);
+            position: relative;
+            margin: 100px auto 0;
+        }
+        .overflow {
+            width: 318px;
+            height: 540px;
+            overflow: hidden;
+            position: absolute;
+            top: 70px;
+            left: 14px;
+
+        }
+        iframe {
+            width: 334px;
+            height: 540px;
+            border: 0;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="overflow">
+            <iframe src="./index.html"></iframe>
+        </div>
+    </div>
+</body>
+</html>
